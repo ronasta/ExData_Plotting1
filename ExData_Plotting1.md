@@ -53,6 +53,12 @@ DT <- fread(
 # "grep" lost the headers, so get them
 setnames(DT, colnames(fread(dataFile, nrows=0)))
 
+# better, but slower: keeps the first line
+# DT <- fread(
+#   paste("sed '1p;/^[12]\\/2\\/2007/!d'", dataFile),
+#   na.strings = c("?", ""))
+
+
 # get English day names
 Sys.setlocale(category = "LC_TIME", locale = "C")
 
@@ -140,7 +146,7 @@ dev.off() ## Don't forget to close the PNG device!
 
 
 ```r
-par(mfrow = c(2,2), bg = "white")
+par(mfrow = c(2,2))
 with(DT, {
 
 ### @[1,1]: same as Plot 2

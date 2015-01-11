@@ -1,5 +1,5 @@
 ## plot2.R
-
+ 
 ## ----getData, results='hold', purl=TRUE, cache=FALSE---------------------
 
 library(data.table, warn.conflicts = FALSE, quietly = TRUE, verbose=FALSE)

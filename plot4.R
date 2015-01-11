@@ -36,7 +36,7 @@ DT <- DT[, DateTime:=as.POSIXct(paste(Date,Time),             # convert Date,Tim
 
 ## ----plot4, results='hide', purl=TRUE, fig.width=5, fig.height=5---------
 
-par(mfrow = c(2,2), bg = "white")
+par(mfrow = c(2,2))
 with(DT, {
 
 ### @[1,1]: same as Plot 2
